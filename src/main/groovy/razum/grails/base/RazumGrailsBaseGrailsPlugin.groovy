@@ -13,10 +13,10 @@ class RazumGrailsBaseGrailsPlugin extends Plugin {
 
     // TODO Fill in these fields
     def title = "Razum Grails Base" // Headline display name of the plugin
-    def author = "Your name"
-    def authorEmail = ""
+    def author = "Gregor Petrin"
+    def authorEmail = "gregor.petrin@razum.si"
     def description = '''\
-Brief summary/description of the plugin.
+Contains various helpers and libraries useful in Grails apps.
 '''
     def profiles = ['web']
 
@@ -26,10 +26,10 @@ Brief summary/description of the plugin.
     // Extra (optional) plugin metadata
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "GPL3"
 
     // Details of company behind the plugin (if there is one)
-//    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
+    def organization = [ name: "Razum d.o.o.", url: "http://razum.si" ]
 
     // Any additional developers beyond the author specified above.
 //    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
