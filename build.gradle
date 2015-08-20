@@ -69,3 +69,7 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
+jar {
+	exclude("UsageController") //usage examples
+	exclude("UrlMappings")
+}
