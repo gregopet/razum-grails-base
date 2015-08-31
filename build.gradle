@@ -66,6 +66,8 @@ dependencies {
     compile "org.grails.plugins:joda-time:2.0.0-SNAPSHOT"
     compile "org.jadira.usertype:usertype.jodatime:2.0.1"
 
+	compile "org.grails.plugins:grails-json-apis:0.96"
+
 
     console "org.grails:grails-console"
 }

@@ -52,6 +52,30 @@
                 }</pre>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>JSON Apis plugin <small><a href="https://github.com/gregopet/grails-json-apis">doc</a></small></h2>
+                <p>To define named APIs you can annotate fields and properties in domain classes accordingly.</p>
+            </div>
+            <div class="col-xs-6">
+                <h3><tt>User.groovy</tt></h3>
+                <pre>${
+                    """\
+                    @JsonApi(["userDetails", "adminOverview"])
+                    DateTime joined
+                    """.stripIndent()
+                }</pre>
+                <h3><tt>UserController.groovy</tt></h3>
+                <pre>${
+                    """\
+                    JSON.use("userDetails") {
+                        render user as JSON
+                    }
+                    """.stripIndent()
+                }</pre>
+            </div>
+        </div>
 	</div>
 
 	<asset:javascript src="lib/angular.js" />
