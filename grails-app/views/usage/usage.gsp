@@ -32,6 +32,24 @@
 		</div>
 
 		<div class="row">
+			<div class="col-xs-6">
+		        <h2>CoffeeScript</h2>
+				<p>CoffeeScript works out of the box</p>
+			</div>
+			<div class="col-xs-6">
+				<h3><tt>module.coffee</tt></h3>
+				<pre>${"""\
+				    for key, val in window
+				        console.log key, val
+				    """.stripIndent()
+				}</pre>
+
+				<h3><tt>index.gsp</tt></h3>
+				<pre>${"""<asset:javascript src='module.js' />"""}</pre>
+			</div>
+		</div>
+
+		<div class="row">
             <div class="col-xs-6">
                 <h2>Joda Time</h2>
                 <p>Server code can use Joda Time and it works in domain classes, too.</p>
