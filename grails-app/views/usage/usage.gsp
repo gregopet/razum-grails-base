@@ -11,7 +11,10 @@
 		
 		<div class="row">
 			<div class="col-xs-6">
-			    <h2>Bootstrap</h2>
+			    <h2>
+			        Bootstrap
+			        <small><a href="http://getbootstrap.com/css/">docs</a></small>
+			    </h2>
 				<p>Bootstrap support is included <span class="glyphicon glyphicon-heart text-red"></span></p>
 			</div>
 			<div class="col-xs-6">
@@ -22,7 +25,10 @@
 
 		<div class="row">
 			<div class="col-xs-6">
-		        <h2>AngularJS</h2>
+		        <h2>
+		            AngularJS
+		            <small><a href="https://code.angularjs.org/1.4.3/docs/api">docs</a></small>
+                </h2>
 				<p>AngularJS is included: <input ng-model="foo" placeholder="type something.."> {{foo}}</p>
 			</div>
 			<div class="col-xs-6">
@@ -33,7 +39,9 @@
 
 		<div class="row">
 			<div class="col-xs-6">
-		        <h2>CoffeeScript</h2>
+		        <h2>CoffeeScript
+		            <small><a href="http://coffeescript.org/">docs</a></small>
+		        </h2>
 				<p>CoffeeScript works out of the box</p>
 			</div>
 			<div class="col-xs-6">
@@ -51,7 +59,13 @@
 
 		<div class="row">
             <div class="col-xs-6">
-                <h2>Joda Time</h2>
+                <h2>
+                    Joda Time
+                    <small>
+                        <a href="http://www.joda.org/joda-time/">docs</a>
+                        <a href="http://jadira.sourceforge.net/apidocs/index.html">hibernate</a>
+                    </small>
+                </h2>
                 <p>Server code can use Joda Time and it works in domain classes, too.</p>
                 <p>According to the server, the current date is ${new org.joda.time.LocalDate()}</p>
             </div>
@@ -73,7 +87,10 @@
 
         <div class="row">
             <div class="col-xs-6">
-                <h2>JSON Apis plugin <small><a href="https://github.com/gregopet/grails-json-apis">doc</a></small></h2>
+                <h2>
+                    JSON Apis plugin
+                    <small><a href="https://github.com/gregopet/grails-json-apis">doc</a></small>
+                </h2>
                 <p>To define named APIs you can annotate fields and properties in domain classes accordingly.</p>
             </div>
             <div class="col-xs-6">
