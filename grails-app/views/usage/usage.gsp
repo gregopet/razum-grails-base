@@ -30,6 +30,28 @@
 				<pre>&lt;asset:javascript src="lib/angular.js" /&gt;</pre>
 			</div>
 		</div>
+
+		<div class="row">
+            <div class="col-xs-6">
+                <h2>Joda Time</h2>
+                <p>Server code can use Joda Time and it works in domain classes, too.</p>
+                <p>According to the server, the current date is ${new org.joda.time.LocalDate()}</p>
+            </div>
+            <div class="col-xs-6">
+                <h3><tt>User.groovy</tt></h3>
+                <pre>${
+                    """\
+                    DateTime joined
+
+                    ...
+
+                    static mapping = {
+                        joined type: PersistentLocalDate
+                    }
+                    """.stripIndent()
+                }</pre>
+            </div>
+        </div>
 	</div>
 
 	<asset:javascript src="lib/angular.js" />
