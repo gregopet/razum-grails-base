@@ -1,5 +1,5 @@
 class UsageController {
-    def index() {
-        render text: 'this is a test'
+    def usage() {
+        render view:'usage'
     }
 }
