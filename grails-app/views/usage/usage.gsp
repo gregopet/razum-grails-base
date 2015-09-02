@@ -170,6 +170,34 @@
                 }</pre>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>
+                    Fields plugin with integrations
+                    <small>
+                        <a href="https://github.com/grails3-plugins/fields">doc</a>
+                    </small>
+                </h2>
+                <p>Wraps fields into Bootstrap classes:</p>
+                <form>
+                    <f:field bean="request" property="queryString" />
+                </form>
+
+                <p>Displays the date picker for JodaTime types:</p>
+                <form>
+                    <g:set var="dur" value="${new org.joda.time.Interval(0, 20)}" />
+                </form>
+            </div>
+            <div class="col-xs-6">
+                <h3><tt>something.gsp</tt></h3>
+                <pre>${
+                    '''\
+                    <f:field bean="request" property="queryString" />
+                    '''.stripIndent()
+                }</pre>
+            </div>
+        </div>
 	</div>
 
 	<asset:javascript src="lib/angular.js" />
