@@ -118,7 +118,7 @@
                     Lo-dash
                     <small><a href="https://lodash.com/docs">doc</a></small>
                 </h2>
-                <p>The replacement to underscore!</p>
+                <p>The replacement to underscore! Also available in Angular templates when using the <tt>razum-base</tt> module.</p>
             </div>
             <div class="col-xs-6">
                 <h3><tt>something.coffee</tt></h3>
@@ -141,7 +141,7 @@
                 </h2>
                 <p>
 					Sane dates with Javascript. Comes with a Joda-to-Moment format conversion, your medium moment.JS datetime format is 
-					<dateformat:fromStyle style="MM" />
+					<dateformat:fromStyle style="MM" />. Can augment the <tt>ngModelController</tt> for use in e.g. inputs.
 				</p>
             </div>
             <div class="col-xs-6">
@@ -149,6 +149,13 @@
                 <pre>${
                     """\
 					console.log moment().subtract(7, 'days').fromNow()
+                    """.stripIndent()
+                }</pre>
+                
+                <h3><tt>view.gsp</tt></h3>
+                <pre>${
+                    """\
+					<input ng-model='foo' date-format="${dateformat.fromStyle(style:'S-')}">
                     """.stripIndent()
                 }</pre>
             </div>
@@ -174,35 +181,43 @@
         <div class="row">
             <div class="col-xs-6">
                 <h2>
-                    Fields plugin with integrations
-                    <small>
-                        <a href="https://github.com/grails3-plugins/fields">doc</a>
-                    </small>
+                    Bootstrap Moment.js Datetime picker
+                    <small><a href="http://eonasdan.github.io/bootstrap-datetimepicker/">docs</a></small>
                 </h2>
-                <p>Wraps fields into Bootstrap classes:</p>
-                <form>
-                    <f:field bean="request" property="queryString" />
-                </form>
-
-                <p>Displays the date picker for JodaTime types:</p>
-                <form>
-                    <g:set var="dur" value="${new org.joda.time.Interval(0, 20)}" />
-                </form>
+                <p>Datepicker because HTML sucks in this regard. Integrated with Angular when using the <tt>razum-base</tt> angular module.</p>
+                <p>
+					<datetimepicker datetimepicker-options="{inline: true, format: '${dateformat.fromStyle(style:'SS')}'}" ng-model="dateFrom" />
+                </p>
             </div>
             <div class="col-xs-6">
                 <h3><tt>something.gsp</tt></h3>
                 <pre>${
                     '''\
-                    <f:field bean="request" property="queryString" />
+					<datetimepicker datetimepicker-options="{inline: true, format: '${dateformat.fromStyle(style:'S-')}'}" ng-model="dateFrom" />
+                    '''.stripIndent()
+                }</pre>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>
+                    <tt>razum-base</tt> Angular module
+                </h2>
+                <p>Adds a bunch of helpers for Angular. See other sections for usage.</p>
+            </div>
+            <div class="col-xs-6">
+                <h3><tt>layout.gsp</tt></h3>
+                <pre>${
+                    '''\
+                    <asset:javascript src="module_razum_base/module.coffee" />
                     '''.stripIndent()
                 }</pre>
             </div>
         </div>
 	</div>
 
-	<asset:javascript src="lib/angular.js" />
-	<script type="text/javascript">
-	    angular.module("usage", [])
-	</script>
+	<asset:javascript src="module_razum_base/module.coffee" />
 </body>
 </html>
