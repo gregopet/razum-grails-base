@@ -1,9 +1,11 @@
-#= require ../lib/jquery-1.11.3.js
-#= require ../lib/angular/angular.js
-#= require ../lib/bootstrap/bootstrap.js
+#= require ../lib/moment-with-locales.js
 #= require ../lib/lodash.js
+#= require ../lib/jquery-1.11.3.js
+#= require ../lib/angular.js
+#= require ../lib/bootstrap.js
 #= require_self
-#= require_tree .
+#= require directives/dateFormatDirective.coffee
+#= require directives/datetimepicker-directive.js
 
 # uses http://tombatossals.github.io/angular-leaflet-directive/#!/
 module = angular.module('razum-base', [])

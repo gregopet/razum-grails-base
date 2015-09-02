@@ -21,4 +21,4 @@ directive = ($timeout) ->
 				printed = moment(ngModelCtrl.$modelValue).format(format)
 				element.val(printed)
 
-angular.module('common').directive 'dateFormat', [dependencies..., directive]
+angular.module('razum-base').directive 'dateFormat', [dependencies..., directive]

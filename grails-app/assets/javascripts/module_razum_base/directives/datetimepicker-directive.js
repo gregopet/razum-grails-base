@@ -2,8 +2,7 @@
 
 'use strict';
 
-angular
-.module('common')
+angular.module('razum-base')
 
 .provider('datetimepicker', function () {
 	var default_options = {};
