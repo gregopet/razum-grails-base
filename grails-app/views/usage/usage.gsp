@@ -22,6 +22,8 @@
 			    <pre>&lt;asset:stylesheet href="lib/bootstrap.css"/&gt;</pre>
 			</div>
 		</div>
+		
+		<hr>
 
 		<div class="row">
 			<div class="col-xs-6">
@@ -37,6 +39,8 @@
 			</div>
 		</div>
 
+		<hr>
+		
 		<div class="row">
 			<div class="col-xs-6">
 		        <h2>CoffeeScript
@@ -56,6 +60,8 @@
 				<pre>${"""<asset:javascript src='module.js' />"""}</pre>
 			</div>
 		</div>
+		
+		<hr>
 
 		<div class="row">
             <div class="col-xs-6">
@@ -84,6 +90,8 @@
                 }</pre>
             </div>
         </div>
+        
+        <hr>
 
         <div class="row">
             <div class="col-xs-6">
@@ -112,6 +120,8 @@
             </div>
         </div>
         
+        <hr>
+        
         <div class="row">
             <div class="col-xs-6">
                 <h2>
@@ -132,6 +142,8 @@
                 }</pre>
             </div>
         </div>
+        
+        <hr>
         
         <div class="row">
             <div class="col-xs-6">
@@ -158,9 +170,7 @@
 					<input ng-model='foo' date-format="${dateformat.fromStyle(style:'S-')}">
                     """.stripIndent()
                 }</pre>
-            </div>
-            
-            <div class="col-xs-6">
+                
                 <h3><tt>layout.gsp</tt></h3>
                 <pre>${
                     '''\
@@ -177,6 +187,8 @@
                 }</pre>
             </div>
         </div>
+        
+        <hr>
 
         <div class="row">
             <div class="col-xs-6">
@@ -198,6 +210,8 @@
                 }</pre>
             </div>
         </div>
+        
+        <hr>
         
         
         <div class="row">
