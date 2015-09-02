@@ -5,7 +5,7 @@
 	<title>Razum grails application base</title>
 	<asset:stylesheet href="lib/bootstrap.css" />
 </head>
-<body ng-app="usage">
+<body ng-app="razum-base">
 	<div class="container-fluid">
 		<h1 class="page-header">Razum grails application base - usage instructions</h1>
 		
