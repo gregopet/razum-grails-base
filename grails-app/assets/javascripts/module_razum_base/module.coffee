@@ -1,3 +1,4 @@
+#= require ../lib/jquery-1.11.3.js
 #= require ../lib/angular/angular.js
 #= require ../lib/bootstrap/bootstrap.js
 #= require ../lib/lodash.js
