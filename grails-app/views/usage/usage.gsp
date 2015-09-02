@@ -132,6 +132,44 @@
                 }</pre>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>
+                    Moment.js
+                    <small><a href="http://momentjs.com/docs/">doc</a></small>
+                </h2>
+                <p>
+					Sane dates with Javascript. Comes with a Joda-to-Moment format conversion, your medium moment.JS datetime format is 
+					<dateformat:fromStyle style="MM" />
+				</p>
+            </div>
+            <div class="col-xs-6">
+                <h3><tt>something.coffee</tt></h3>
+                <pre>${
+                    """\
+					console.log moment().subtract(7, 'days').fromNow()
+                    """.stripIndent()
+                }</pre>
+            </div>
+            
+            <div class="col-xs-6">
+                <h3><tt>layout.gsp</tt></h3>
+                <pre>${
+                    '''\
+					<script type="text/javascript">
+						//set the same locale in JS as on the server
+						moment.locale('${org.springframework.web.servlet.support.RequestContextUtils.getLocale(request).language}');
+						
+						//get the proper time, date or datetime format via taglibs
+						var momentDateFormat = '${dateformat.fromStyle(style:"S-")}'
+						var momentTimeFormat = '${dateformat.fromStyle(style:"-M")}'
+						var momentDateTimeFormat = '${dateformat.fromStyle(style:"MS")}'
+					</script>
+                    '''.stripIndent()
+                }</pre>
+            </div>
+        </div>
 	</div>
 
 	<asset:javascript src="lib/angular.js" />
