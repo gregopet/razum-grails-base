@@ -153,7 +153,8 @@
                 </h2>
                 <p>
 					Sane dates with Javascript. Comes with a Joda-to-Moment format conversion, your medium moment.JS datetime format is 
-					<dateformat:fromStyle style="MM" />. Can augment the <tt>ngModelController</tt> for use in e.g. inputs.
+					<dateformat:fromStyle style="MM" />. Can augment the <tt>ngModelController</tt> for use in e.g. inputs:
+					<input type="text" date-format="${dateformat.fromStyle(style:'S-')}" ng-model="dateFormatSample" placeholder="type a valid date">: {{ dateFormatSample }}
 				</p>
             </div>
             <div class="col-xs-6">
