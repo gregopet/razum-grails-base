@@ -7,7 +7,6 @@
 #= require directives/dateFormatDirective.coffee
 #= require directives/datetimepicker-directive.js
 
-# uses http://tombatossals.github.io/angular-leaflet-directive/#!/
 module = angular.module('razum-base', [])
 
 # make lodash available in HTML directives
