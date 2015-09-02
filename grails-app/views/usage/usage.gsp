@@ -70,6 +70,7 @@
                     <small>
                         <a href="http://www.joda.org/joda-time/">docs</a>
                         <a href="http://jadira.sourceforge.net/apidocs/index.html">hibernate</a>
+                        <a href="http://gpc.github.io/joda-time/">plugin</a>
                     </small>
                 </h2>
                 <p>Server code can use Joda Time and it works in domain classes, too.</p>
