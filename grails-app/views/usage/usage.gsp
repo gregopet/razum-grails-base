@@ -111,6 +111,27 @@
                 }</pre>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>
+                    Lo-dash
+                    <small><a href="https://lodash.com/docs">doc</a></small>
+                </h2>
+                <p>The replacement to underscore!</p>
+            </div>
+            <div class="col-xs-6">
+                <h3><tt>something.coffee</tt></h3>
+                <pre>${
+                    """\
+					_.chain(foos)
+						.pluck('bar')
+						.filter()
+						.values()
+                    """.stripIndent()
+                }</pre>
+            </div>
+        </div>
 	</div>
 
 	<asset:javascript src="lib/angular.js" />
