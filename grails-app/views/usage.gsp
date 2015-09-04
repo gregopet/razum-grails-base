@@ -49,7 +49,7 @@
 					<small><a href="http://getbootstrap.com/css/">docs</a></small>
 				</h2>
 				<p>Bootstrap support is included <span class="glyphicon glyphicon-heart text-red"></span></p>
-				<p>Form validation classes are tweaked so they work with Angular's <tt>ng-invalid</tt> class</p>
+				<p>Form validation classes are tweaked so they work with Angular's <tt>ng-invalid</tt> class and <tt>ng-cloak</tt> support is also included.</p>
 			</div>
 			<div class="col-xs-6">
 				<h3><tt>layouts/main.gsp</tt></h3>

@@ -6,6 +6,11 @@
 
 /** Any modifications to vanilla bootstrap can be put here */
 
+/* ng-cloak support */
+[ng-cloak] {
+	display:none;
+}
+
 /* Bootstrap classes for has-error copied so it works with Angular */
 .ng-invalid.ng-dirty .help-block,
 .ng-invalid.ng-dirty .control-label,
