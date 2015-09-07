@@ -4,7 +4,7 @@
 	name="${prefix}${property}" 
 	value="${joda.format(value:"${value}", style:"SS")}"
 	datetimepicker
-	datetimepicker-options="{format: '${dateformat.fromStyle(style:'SS')}', defaultDate: ${value?.millis ?: 'false'}"
+	datetimepicker-options="{format: '${dateformat.fromStyle(style:'SS')}', defaultDate: ${value?.millis ?: 'false'}}"
 	${required ? raw('required="required"') : ''}
 	<%/*
 		attrs?.each { key, value ->
