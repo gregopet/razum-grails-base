@@ -11,6 +11,9 @@
 	display:none;
 }
 
+/* Datetimepicker support - so the picker isn't displayed somewhere completely off */
+.form-group { position: relative }
+
 /* Bootstrap classes for has-error copied so it works with Angular */
 .ng-invalid.ng-dirty .help-block,
 .ng-invalid.ng-dirty .control-label,

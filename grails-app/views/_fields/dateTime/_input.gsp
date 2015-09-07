@@ -3,7 +3,6 @@
 	type="text" 
 	name="${prefix}${property}" 
 	value="${joda.format(value:"${value}", style:"SS")}"
-	style="position: relative"
 	datetimepicker
 	datetimepicker-options="{format: '${dateformat.fromStyle(style:'SS')}', defaultDate: ${value?.millis ?: 'false'}}"
 	${required ? raw('required="required"') : ''}
