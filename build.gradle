@@ -53,6 +53,12 @@ dependencyManagement {
     applyMavenExclusions false
 }
 
+configurations.all {
+	resolutionStrategy {
+		force 'org.grails.plugins:fields:2.1.+'
+	}
+}
+
 dependencies {
     provided 'org.springframework.boot:spring-boot-starter-logging'
     provided "org.springframework.boot:spring-boot-starter-actuator"
