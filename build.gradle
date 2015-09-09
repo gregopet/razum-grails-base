@@ -69,8 +69,8 @@ dependencies {
 	runtime 'com.bertramlabs.plugins:coffee-asset-pipeline:2.0.7'
 	
 	//fields plugin & scaffolding
-	compile "org.grails.plugins:scaffolding:2.1.0-SNAPSHOT"
-	compile "org.grails.plugins:fields:2.1.0-SNAPSHOT"
+	compile "org.grails.plugins:scaffolding:3.1.1"
+	compile "org.grails.plugins:fields:2.1.+"
 
     compile "org.grails.plugins:joda-time:2.0.0-SNAPSHOT"
     compile "org.jadira.usertype:usertype.jodatime:2.0.1"
