@@ -233,7 +233,7 @@
 		</div>
 		
 		<hr>
-
+		
 		<div class="row">
 			<div class="col-xs-6">
 				<h2>
@@ -270,6 +270,41 @@
 					'''.stripIndent()
 				}</code></pre>
 			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-6">
+				<h2>
+					Fields plugin integration
+					<small><a href="https://github.com/grails3-plugins/fields">docs</a></small>
+				</h2>
+				<p>
+					Includes bootstrap-compatible rendering of fields. Dates use the datetime picker. Enums are picked up automatically.
+				</p>
+			</div>
+			<div class="col-xs-6">
+				<h3><tt>Domain.groovy</tt></h3>
+				<pre><code class="groovy">${
+					'''\
+					enum DomainClassType { SOME_TYPE }
+					'''.stripIndent()
+				}</code></pre>
+				
+				<h3><tt>messages.properties</tt></h3>
+				<pre><code class="properties">${
+					'''\
+					domainClassType.SOME_TYPE=Some type
+					'''.stripIndent()
+				}</code></pre>
+				
+				<h3><tt>_fields.gsp</tt></h3>
+				<pre><code class="properties">${
+					'''\
+					<f:field bean="bean" property="domainClassType" />
+					'''.stripIndent()
+				}</code></pre>
+			</div>
+		
 		</div>
 	</div>
 
