@@ -61,6 +61,19 @@
 		
 		<div class="row">
 			<div class="col-xs-6">
+				<h2>Other CSS tweaks</h2>
+				<p>To include non-bootstrap utilities you can pull in <tt>razum_grails_base.css</tt> which adds the <tt>.noselect</tt> and <tt>ng-cloak</tt> support</p>
+			</div>
+			<div class="col-xs-6">
+				<h3><tt>layouts/main.gsp</tt></h3>
+				<pre><code class="html">&lt;asset:stylesheet href="razum_grails_base.css"/&gt;</code></pre>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-xs-6">
 				<h2>
 					<tt>razum-base</tt> Angular module
 				</h2>
