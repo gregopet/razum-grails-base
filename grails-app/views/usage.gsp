@@ -120,6 +120,70 @@
 				}</code></pre>
 			</div>
 		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-xs-6">
+				<h2>i18n link between Grails and Angular</h2>
+				<p>
+					Use messages from <tt>.properties</tt> files in Angular.
+					<em>
+						Angular code currently assumes translations are available at <tt>/api/translations</tt>, changing
+						this or making it configurable should be trivial.
+					</em>
+				</p>
+			</div>
+			<div class="col-xs-6">
+				
+				<h3><tt>TranslationsController.groovy</tt></h3>
+				<pre><code class="groovy">${'''\
+				import jssupport.MessagesList
+				import grails.converters.JSON
+				
+				class TranslationsController {
+					def messageSource
+
+					def index() {
+						//implement whatever caching strategy that best suits your app here
+					
+						def translations = MessagesList.getMessages(messageSource, request, "original.EVENT", "js.message" /* other prefixes interesting to JS.. */)
+						render translations as JSON
+					}
+				}
+				'''.stripIndent()}</code></pre>
+
+				<h3><tt>messages.properties</tt></h3>
+				<pre><code>${'''\
+				original.EVENT.1=Phone call from {0}
+				original.EVENT.2=Text message from {0}
+				original.EVENT.3=Email from {0}
+				'''.stripIndent()}</code></pre>
+				
+				<h3><tt>index.gsp</tt></h3>
+				<pre><code class="html">${'''\
+					<span code='original.EVENT.{{event.type}}' args="[event.name]"></span>
+					<span param-code="{title: ['original.EVENT.' + eventType, event.name]}">tooltip here</span>
+				'''.stripIndent()</code></pre>
+				
+				
+				<h3><tt>someService.coffee</tt></h3>
+				<pre><code>${'''\
+					dependencies = ['translationService']
+					
+					class MyService
+						def translator
+					
+						constructor: (translationService) ->
+							translationService.translatorPromise.then (translatorObj) -> translator = translatorObj
+							
+						constructMessage: (event) -> "We have received a #{translator.forCode('event.type', [event.name])}"
+					
+					angular.module('my-module').service 'myService', [ dependencies..., MyService]
+				'''.stripIndent()</code></pre>
+			</div>
+		</div>
+		
 
 		<hr>
 		
