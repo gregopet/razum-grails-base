@@ -59,6 +59,34 @@
 		
 		<hr>
 		
+		
+		<div class="row">
+			<div class="col-xs-6">
+				<h2>
+					UI Bootstrap
+					<small><a href="http://angular-ui.github.io/bootstrap/">docs</a></small>
+				</h2>
+				<p>The glue between Bootstrap and Angular.</p>
+			</div>
+			<div class="col-xs-6">
+				<h3><tt>index.gsp</tt></h3>
+				<pre><code>${'''\
+					<div collapse="isCollapsed">
+						<div class="well well-lg">Some content</div>
+					</div>
+				'''.stripIndent()}</code></pre>
+			
+				<h3><tt>someCtrl.js</tt></h3>
+				<pre><code>${'''\
+					$scope.isCollapsed = false
+				'''.stripIndent()}</code></pre>
+			
+			</div>
+		</div>
+		
+		
+		<hr>
+		
 		<div class="row">
 			<div class="col-xs-6">
 				<h2>Other CSS tweaks</h2>
@@ -254,7 +282,7 @@
 					<small><a href="http://eonasdan.github.io/bootstrap-datetimepicker/">docs</a></small>
 				</h2>
 				<p>
-					Datepicker because HTML sucks in this regard. Integrated with Angular when using the <tt>razum-base</tt> angular module.
+					Datepicker because HTML sucks in this regard. Integrated with Angular when using the <tt>razum-base</tt> angular module. Much better than the UI Bootstrap solution, uses Moment.js internally.
 				</p>
 				<div class="row">
 					<div class="col-md-4">

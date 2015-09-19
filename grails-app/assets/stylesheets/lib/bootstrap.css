@@ -6,6 +6,9 @@
 
 /** Any modifications to vanilla bootstrap can be put here */
 
+/* UI Bootstrap support*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 /* Datetimepicker support - so the picker isn't displayed somewhere completely off */
 .form-group { position: relative }
 
