@@ -279,7 +279,7 @@
 					<small><a href="https://github.com/grails3-plugins/fields">docs</a></small>
 				</h2>
 				<p>
-					Includes bootstrap-compatible rendering of fields. Dates use the datetime picker. Enums are picked up automatically.
+					Includes bootstrap-compatible rendering of fields. Dates use the datetime picker - defaults can be overriden by providing a <tt>widget-datetimepicker-options</tt> parameter. Enums are picked up automatically.
 				</p>
 			</div>
 			<div class="col-xs-6">
