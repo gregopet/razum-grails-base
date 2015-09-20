@@ -154,11 +154,21 @@
 			<div class="col-xs-6">
 				<h2>i18n link between Grails and Angular</h2>
 				<p>
-					Use messages from <tt>.properties</tt> files in Angular.
+					Use messages from <tt>.properties</tt> files in Angular. Implement a simple controller serving them,
+					the code sample here is all you need.
 					<em>
 						Angular code currently assumes translations are available at <tt>/api/translations</tt>, changing
 						this or making it configurable should be trivial.
 					</em>
+				</p>
+				<p ng-cloak>
+					<input class="form-control" type="number" ng-model="translationNumber" ng-init="translationNumber=1"></input>
+					<input class="form-control" type="text" ng-model="name" placeholder="Enter a name" ng-init="name='John'"></input>
+					The translation for <tt>razum.grails.base.demo.{{translationNumber}}</tt> is: 
+					<strong code="razum.grails.base.demo.{{translationNumber.toString()}}" args="{{[name]}}" ></strong>
+				</p>
+				<p>
+					<input param-code="{placeholder: ['razum.grails.base.demo.{{translationNumber}}', '{{name}}']}" >
 				</p>
 			</div>
 			<div class="col-xs-6">
@@ -188,13 +198,13 @@
 				'''.stripIndent()}</code></pre>
 				
 				<h3><tt>index.gsp</tt></h3>
-				<pre><code class="html">${'''\
-					<span code='original.EVENT.{{event.type}}' args="[event.name]"></span>
-					<span param-code="{title: ['original.EVENT.' + eventType, event.name]}">tooltip here</span>
-				'''.stripIndent()</code></pre>
+				<pre><code class="html" ng-non-bindable>${'''\
+					<span code='original.EVENT.{{event.type}}' args="{{[event.name]}}"></span>
+					<span param-code="{title: ['original.EVENT.{{eventType}}, '{{event.name}}']}">tooltip here</span>
+				'''.stripIndent()}</code></pre>
 				
 				
-				<h3><tt>someService.coffee</tt></h3>
+				<h3><tt>someService.coffee</tt> <small>(when you require translations outside of the view layer)</small></h3>
 				<pre><code>${'''\
 					dependencies = ['translationService']
 					
@@ -207,7 +217,7 @@
 						constructMessage: (event) -> "We have received a #{translator.forCode('event.type', [event.name])}"
 					
 					angular.module('my-module').service 'myService', [ dependencies..., MyService]
-				'''.stripIndent()</code></pre>
+				'''.stripIndent()}</code></pre>
 			</div>
 		</div>
 		
