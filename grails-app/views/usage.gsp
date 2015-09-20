@@ -115,6 +115,9 @@
 			<div class="col-xs-6">
 				<h2>Other CSS tweaks</h2>
 				<p>To include non-bootstrap utilities you can pull in <tt>razum_grails_base.css</tt> which adds the <tt>.noselect</tt> and <tt>ng-cloak</tt> support</p>
+				<p class="noselect">
+					Can't select me (in some browsers, anyway).
+				</p>
 			</div>
 			<div class="col-xs-6">
 				<h3><tt>layouts/main.gsp</tt></h3>
