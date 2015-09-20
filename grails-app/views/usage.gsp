@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Razum grails application base</title>
-	<asset:stylesheet href="lib/bootstrap.css" />
+	<asset:stylesheet href="razum_grails_base.css" />
 	
 	<%-- code highlighting --%>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/github.min.css">
@@ -125,7 +125,7 @@
 				<h3><tt>layout.gsp</tt></h3>
 				<pre><code class="html">${
 					'''\
-					<asset:style href="lib/bootstrap.css" />
+					<asset:style href="razum_grails_base.css" />
 					
 					...
 					
