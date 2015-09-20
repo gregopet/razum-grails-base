@@ -304,6 +304,9 @@
 					<input type="text" date-format="${dateformat.fromStyle(style:'S-')}" ng-model="dateFormatSample" class="form-control" placeholder="type a valid date">
 					{{ dateFormatSample }}
 				</p>
+				<p>
+					Also available in Angular templates when using the <tt>razum-base</tt> module: {{ moment().toString() }}
+				</p>
 			</div>
 			<div class="col-xs-6">
 				<h3><tt>something.coffee</tt></h3>

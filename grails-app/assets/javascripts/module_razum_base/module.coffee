@@ -12,5 +12,8 @@
 
 module = angular.module('razum-base', [])
 
-# make lodash available in HTML directives
-module.run ['$rootScope', (rootScope) -> rootScope._ = _]
+# make lodash and moment available in HTML directives
+module.run ['$rootScope', (rootScope) -> 
+			rootScope._ = _
+			rootScope.moment = moment
+]
