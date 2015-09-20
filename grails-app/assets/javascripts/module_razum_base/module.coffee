@@ -10,7 +10,7 @@
 #= require services/translationService.js
 #= require directives/codeDirective.js
 
-module = angular.module('razum-base', [])
+module = angular.module('razum-base', ['ui.bootstrap'])
 
 # make lodash and moment available in HTML directives
 module.run ['$rootScope', (rootScope) -> 
