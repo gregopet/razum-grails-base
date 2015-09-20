@@ -10,6 +10,7 @@ class RazumGrailsBaseGrailsPlugin extends Plugin {
     def pluginExcludes = [
         "grails-app/views/error.gsp",
         "grails-app/controllers/UsageController.groovy",
+        "grails-app/controllers/TranslationsController.groovy",
         "grails-app/controllers/UrlMappings.groovy"
         
     ]

@@ -92,4 +92,5 @@ task wrapper(type: Wrapper) {
 jar {
 	exclude("UsageController") //usage examples
 	exclude("UrlMappings")
+	exclude("TranslationsController") //apps should override this!
 }
