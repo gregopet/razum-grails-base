@@ -81,6 +81,16 @@
 					<small><a href="http://angular-ui.github.io/bootstrap/">docs</a></small>
 				</h2>
 				<p>The glue between Bootstrap and Angular.</p>
+				<p>
+					<label class="control-label">
+						<input type="checkbox" ng-model="isCollapsed">toggle me
+					</label>
+				</p>
+				<div collapse="!isCollapsed" ng-cloak>
+					<div class="well well-lg">Some content</div>
+				</div>
+					
+				
 			</div>
 			<div class="col-xs-6">
 				<h3><tt>index.gsp</tt></h3>
