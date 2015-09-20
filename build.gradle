@@ -76,9 +76,6 @@ dependencies {
 	
 	//fields plugin & scaffolding
 	compile "org.grails.plugins:fields:2.1.+"
-	compile ("org.grails.plugins:scaffolding:3.1.1") {
-		exclude module:'fields'
-	}
 
     compile "org.grails.plugins:joda-time:2.0.0-SNAPSHOT"
     compile "org.jadira.usertype:usertype.jodatime:2.0.1"
