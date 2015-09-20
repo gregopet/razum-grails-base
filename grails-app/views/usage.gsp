@@ -26,6 +26,20 @@
 	<div class="container-fluid">
 		<h1 class="page-header">Razum grails application base - usage instructions</h1>
 		
+		
+		<h2>Installation</h2>
+		<p>
+			Include the plugin as a compile dependency. Besides this, you may need to alter the appliacation's
+			<tt>build.gradle</tt> since Grails fixes the version of certain dependencies in the <tt>mavenBom "org.grails:grails-bom:$grailsVersion"</tt>
+			line. One such example is the fields plugin which you can override by adding the following block 
+			into the <tt>dependencyManagement</tt> closure:
+			<pre><code class="groovy">${'''\
+			dependencies {
+				dependency "org.grails.plugins:fields:2.1.0"
+			}
+			'''.stripIndent()}</code></pre>
+		</p>
+		
 		<div class="row">
 			<div class="col-xs-6">
 				<h2>
