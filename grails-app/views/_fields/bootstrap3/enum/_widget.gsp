@@ -11,4 +11,4 @@
 	
 	params.putAll(attrs ?: [:])
 %>
-${g.select(params)}
+${raw(g.select(params))}
