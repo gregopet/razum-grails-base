@@ -382,6 +382,57 @@
 		<div class="row">
 			<div class="col-xs-6">
 				<h2>
+					bootstrap-multiselect.js
+					<small><a href="https://github.com/angular-ui/ui-select">source</a></small>
+				</h2>
+				<p>A nicer multi-select. Comes with (basic) Angular integration.</p>
+				<p>
+					<select multiple multi-select="{nonSelectedText:'{{noSelectionText}}'}" ng-model="multiSelect">
+						<option>Cow</option>
+						<option>Pig</option>
+						<option>Dog</option>
+						<option>Bee</option>
+						<option>Rat</option>
+						<option>Ant</option>
+						<option>Fox</option>
+						<option>Bat</option>
+						<option>Ape</option>
+						<option>Ass</option>
+						<option>Ram</option>
+						<option>Yak</option>
+						<option>Doe</option>
+					</select>
+					
+					<p>Selected options: {{multiSelect}}</p>
+					<p>
+						<label class="form-label">Dynamic options example:</label>
+						<input placeholder="options are changeable" ng-model="noSelectionText" ng-init="noSelectionText='Nothing selected'">
+					</p>
+				</p>
+			</div>
+			<div class="col-xs-6">
+				<pre><code class="html">${
+					'''\
+					<select multiple multi-select ng-model="multiSelect">
+						<option>Cow</option>
+						<option>Pig</option>
+						<option>Dog</option>
+						<option>Bee</option>
+					<select>
+					
+					<select multiple multi-select="{numberDisplayed:1, nonSelectedText:'{{anNgVariable}}'}" ng-model="multiSelect">
+						...
+					</select>
+					'''.stripIndent()
+				}</code></pre>
+			</div>
+		</div>
+		
+		<hr>
+		
+		<div class="row">
+			<div class="col-xs-6">
+				<h2>
 					Bootstrap Moment.js Datetime picker
 					<small><a href="http://eonasdan.github.io/bootstrap-datetimepicker/">docs</a></small>
 				</h2>

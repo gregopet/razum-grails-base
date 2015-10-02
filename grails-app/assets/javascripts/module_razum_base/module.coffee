@@ -9,6 +9,7 @@
 #= require directives/datetimepicker-directive.js
 #= require services/translationService.js
 #= require directives/codeDirective.js
+#= require directives/multiSelectDirective.js
 
 module = angular.module('razum-base', ['ui.bootstrap'])
 
