@@ -138,11 +138,11 @@
 				<h3><tt>layout.gsp</tt></h3>
 				<pre><code class="html">${
 					'''\
-					<asset:style href="razum_grails_base.css" />
+					<asset:stylesheet href="razum_grails_base.css" />
 					
 					<%-- use these if you want to style & include bootstrap separately --%>
-					<asset:style href="my_custom_bootstrap.css" />
-					<asset:style href="razum_grails_base_no_bootstrap.css" />
+					<asset:stylesheet href="my_custom_bootstrap.css" />
+					<asset:stylesheet href="razum_grails_base_no_bootstrap.css" />
 					
 					...
 					
