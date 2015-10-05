@@ -140,6 +140,10 @@
 					'''\
 					<asset:style href="razum_grails_base.css" />
 					
+					<%-- use these if you want to style & include bootstrap separately --%>
+					<asset:style href="my_custom_bootstrap.css" />
+					<asset:style href="razum_grails_base_no_bootstrap.css" />
+					
 					...
 					
 					<asset:javascript src="module_razum_base/module.js" />

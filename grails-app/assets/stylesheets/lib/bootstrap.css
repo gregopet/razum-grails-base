@@ -3,44 +3,5 @@
  *= require bootstrap/bootstrap-theme.css
  *= require bootstrap/bootstrap-datetimepicker.css
  *= require bootstrap/bootstrap-multiselect.css
+ *= require bootstrap_overrides.css
  */
-
-/** Any modifications to vanilla bootstrap can be put here */
-
-/* UI Bootstrap support*/
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
-
-/* Datetimepicker support - so the picker isn't displayed somewhere completely off */
-.form-group { position: relative }
-
-/* Bootstrap classes for has-error copied so it works with Angular */
-.ng-invalid.ng-dirty .help-block,
-.ng-invalid.ng-dirty .control-label,
-.ng-invalid.ng-dirty .radio,
-.ng-invalid.ng-dirty .checkbox,
-.ng-invalid.ng-dirty .radio-inline,
-.ng-invalid.ng-dirty .checkbox-inline,
-.ng-invalid.ng-dirty.radio label,
-.ng-invalid.ng-dirty.checkbox label,
-.ng-invalid.ng-dirty.radio-inline label,
-.ng-invalid.ng-dirty.checkbox-inline label {
-  color: #a94442;
-}
-.ng-invalid.ng-dirty.form-control {
-  border-color: #a94442;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-}
-.ng-invalid.ng-dirty.form-control:focus {
-  border-color: #843534;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 6px #ce8483;
-}
-.ng-invalid.ng-dirty.input-group-addon {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #a94442;
-}
-.ng-invalid.ng-dirty.form-control-feedback {
-  color: #a94442;
-}
