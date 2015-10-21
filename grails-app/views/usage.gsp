@@ -389,7 +389,7 @@
 					bootstrap-multiselect.js
 					<small><a href="https://github.com/angular-ui/ui-select">source</a></small>
 				</h2>
-				<p>A nicer multi-select. Comes with (basic) Angular integration.</p>
+				<p>A nicer multi-select. Comes with (basic) Angular integration. Default config options can be set via Angular constants.</p>
 				<p>
 					<select multiple multi-select="{nonSelectedText:'{{noSelectionText}}'}" ng-model="multiSelect">
 						<option>Cow</option>
@@ -415,6 +415,7 @@
 				</p>
 			</div>
 			<div class="col-xs-6">
+				<h3><tt>something.gsp</tt></h3>
 				<pre><code class="html">${
 					'''\
 					<select multiple multi-select ng-model="multiSelect">
@@ -427,6 +428,20 @@
 					<select multiple multi-select="{numberDisplayed:1, nonSelectedText:'{{anNgVariable}}'}" ng-model="multiSelect">
 						...
 					</select>
+					'''.stripIndent()
+				}</code></pre>
+				
+				
+				<h3><tt>config.coffee</tt></h3>
+				<pre><code class="coffee">${
+					'''\
+					# set default options
+					angular.module('razum-base').constant 'multiSelectDefaults',
+						enableFiltering : true
+						maxHeight       : 300
+						buttonClass     : 'btn-block btn btn-default'
+						templates       :
+							filter: '<li class="multiselect-item filter"><div class="input-group"><input class="form-control multiselect-search" type="text"></div></li>'
 					'''.stripIndent()
 				}</code></pre>
 			</div>
